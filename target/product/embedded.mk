@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
     mkshrc \
     reboot \
     recovery \
+    rsync \
     service \
     servicemanager \
     sh \
