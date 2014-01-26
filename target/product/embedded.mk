@@ -63,6 +63,7 @@ PRODUCT_PACKAGES += \
     logcat \
     logwrapper \
     reboot \
+    rsync \
     service \
     servicemanager \
     surfaceflinger \
