@@ -106,5 +106,10 @@ PRODUCT_PACKAGES += \
     webview \
     wm
 
+PRODUCT_PACKAGES += \
+    dx-target \
+    dx-target.xml \
+    meltedbutter \
+    meltedbutter.xml \
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
