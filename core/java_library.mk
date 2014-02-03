@@ -91,6 +91,9 @@ $(common_javalib.jar) : $(built_dex) $(java_resource_sources)
 ifneq ($(extra_jar_args),)
 	$(add-java-resources-to-package)
 endif
+ifeq ($(LOCAL_TARGET_CLASSES),true)
+	$(add-java-classes-to-package)
+endif
 
 ifdef LOCAL_DEX_PREOPT
 dexpreopt_boot_jar_module := $(filter $(LOCAL_MODULE),$(DEXPREOPT_BOOT_JARS_MODULES))
