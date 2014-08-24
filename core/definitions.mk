@@ -1695,6 +1695,19 @@ $(hide) if [ -d $(PRIVATE_CLASS_INTERMEDIATES_DIR) ] ; then \
 fi
 endef
 
+# Add java classes from the current module.
+#
+define add-java-classes-to-package
+$(hide) if [ -d $(PRIVATE_CLASS_INTERMEDIATES_DIR) ] ; then \
+    java_class_jar_flags=$$(find $(PRIVATE_CLASS_INTERMEDIATES_DIR) -type f -name "*.class" \
+        | sed -e "s?^$(PRIVATE_CLASS_INTERMEDIATES_DIR)/? -C $(PRIVATE_CLASS_INTERMEDIATES_DIR) ?"); \
+    if [ -n "$$java_class_jar_flags" ] ; then \
+        echo $$java_class_jar_flags >$(dir $@)java_class_jar_flags; \
+        jar uf $@ $$java_class_jar_flags; \
+    fi; \
+fi
+endef
+
 # Sign a package using the specified key/cert.
 #
 define sign-package

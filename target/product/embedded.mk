@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     adb \
     adbd \
     bootanimation \
+    busybox \
     debuggerd \
     dumpstate \
     dumpsys \
@@ -62,6 +63,7 @@ PRODUCT_PACKAGES += \
     logcat \
     logwrapper \
     reboot \
+    rsync \
     service \
     servicemanager \
     surfaceflinger \

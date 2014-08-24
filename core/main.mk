@@ -316,6 +316,11 @@ ifneq (,$(user_variant))
         WITH_DEXPREOPT := true
       endif
     endif
+    ifeq ($(user_variant),userdebug)
+      ifeq ($(HOST_OS),linux)
+        WITH_DEXPREOPT := true
+      endif
+    endif
   endif
 
   # Disallow mock locations by default for user builds
