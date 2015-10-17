@@ -66,9 +66,16 @@ PRODUCT_PACKAGES += \
     reboot \
     recovery \
     rsync \
+    scp \
     service \
     servicemanager \
+    sftp \
     sh \
+    ssh \
+    ssh-keygen \
+    sshd \
+    sshd_config \
+    start-ssh \
     surfaceflinger \
     toolbox \
     toybox \
