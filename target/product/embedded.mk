@@ -31,6 +31,7 @@ PRODUCT_PACKAGES += \
     grep \
     gzip \
     healthd \
+    htop \
     init \
     init.environ.rc \
     init.rc \
@@ -49,6 +50,7 @@ PRODUCT_PACKAGES += \
     libjpeg \
     liblog \
     libm \
+    libncurses \
     libpixelflinger \
     libpower \
     libsigchain \
